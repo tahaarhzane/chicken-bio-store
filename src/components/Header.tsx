@@ -14,7 +14,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 100) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -26,17 +26,17 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-700 ${
-        isScrolled
-          ? "bg-white/[0.12] backdrop-blur-2xl shadow-2xl border-b border-white/[0.2]"
-          : "bg-transparent"
-      }`}
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{
+        y: isScrolled ? 0 : -100,
+        opacity: isScrolled ? 1 : 0
+      }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/[0.12] backdrop-blur-2xl shadow-2xl border-b border-white/[0.2]`}
     >
       <div className="container mx-auto px-8">
-        <div className={`flex items-center justify-between h-20 transition-all duration-500 ${
-          isScrolled ? "text-gray-900" : "text-white"
-        }`}>
+        <div className="flex items-center justify-between h-20 text-gray-900">
           {/* Logo */}
           <Logo
             size="md"
@@ -175,6 +175,6 @@ export default function Header() {
           </motion.div>
         )}
       </div>
-    </header>
+    </motion.header>
   );
 }
