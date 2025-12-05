@@ -45,7 +45,7 @@ export default function Header() {
           <Logo
             size="md"
             showText={true}
-            containerClassName={`${isScrolled ? "text-gray-900" : "text-primary-dark"}`}
+            containerClassName={`${isScrolled ? "text-gray-900" : "text-white"}`}
             className={`transition-all duration-500 ${
               isScrolled ? "bg-primary shadow-lg hover:shadow-xl hover:scale-110" : "bg-primary hover:shadow-lg hover:scale-105"
             }`}
