@@ -27,16 +27,20 @@ export default function Header() {
 
   return (
     <motion.header
-      initial={{ y: -100 }}
       animate={{
-        y: isScrolled ? 0 : -100,
-        opacity: isScrolled ? 1 : 0
+        height: isScrolled ? "5rem" : "3.5rem", // h-20 vs h-14
+        backgroundColor: isScrolled ? "rgba(255, 255, 255, 0.12)" : "transparent",
+        backdropFilter: isScrolled ? "blur(16px)" : "none",
+        boxShadow: isScrolled ? "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" : "none",
+        borderBottom: isScrolled ? "1px solid rgba(255, 255, 255, 0.2)" : "none",
       }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 bg-white/[0.12] backdrop-blur-2xl shadow-2xl border-b border-white/[0.2]`}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 px-8`}
     >
-      <div className="container mx-auto px-8">
-        <div className="flex items-center justify-between h-20 text-gray-900">
+      <div className="container mx-auto h-full">
+        <div className={`flex items-center justify-between h-full transition-all duration-400 ${
+          isScrolled ? "text-gray-900" : "text-white"
+        }`}>
           {/* Logo */}
           <Logo
             size="md"
@@ -88,21 +92,21 @@ export default function Header() {
             <button className={`p-3 rounded-full transition-all duration-400 ${
               isScrolled
                 ? "hover:bg-white/20 text-gray-900 bg-white/10"
-                : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
+                : "hover:bg-white/10 text-white"
             }`}>
               <Search className="w-6 h-6" />
             </button>
             <button className={`p-3 rounded-full transition-all duration-400 ${
               isScrolled
                 ? "hover:bg-white/20 text-gray-900 bg-white/10"
-                : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
+                : "hover:bg-white/10 text-white"
             }`}>
               <User className="w-6 h-6" />
             </button>
             <button className={`p-3 rounded-full transition-all duration-400 relative ${
               isScrolled
                 ? "hover:bg-white/20 text-gray-900 bg-white/10"
-                : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
+                : "hover:bg-white/10 text-white"
             }`}>
               <ShoppingCart className="w-6 h-6" />
               <span className={`absolute top-0 right-0 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center transition-all duration-300 ${
@@ -117,7 +121,7 @@ export default function Header() {
               className={`md:hidden p-3 rounded-full transition-all duration-400 ${
                 isScrolled
                   ? "hover:bg-white/20 text-gray-900 bg-white/10"
-                  : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
+                  : "hover:bg-white/10 text-white"
               }`}
               onClick={toggleMenu}
             >
