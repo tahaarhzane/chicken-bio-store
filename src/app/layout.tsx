@@ -13,14 +13,19 @@ export const metadata: Metadata = {
   description: "Découvrez notre sélection de poulet bio, élevé dans le respect de l'environnement et du bien-être animal. Livraison rapide à Paris et en Île-de-France.",
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: '32x32' }
+      { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+      { url: '/favicon.ico', sizes: 'any' }
     ],
+    shortcut: '/favicon.ico',
     apple: [
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' }
     ],
   },
   manifest: '/site.webmanifest',
+  other: {
+    'theme-color': '#10B981',
+    'msapplication-TileColor': '#10B981',
+  },
 };
 
 export default function RootLayout({
