@@ -53,7 +53,7 @@ export default function Logo({
         />
       </div>
       {showText && (
-        <span className={`font-bold transition-all duration-500 group-hover:text-primary text-gray-900 ${currentSize.text}`}>
+        <span className={`font-bold transition-all duration-500 group-hover:text-primary ${currentSize.text}`}>
           BioChicken
         </span>
       )}
