@@ -55,7 +55,7 @@ const products = [
     name: "Mélange grillade poulet bio",
     price: 14.99,
     originalPrice: 17.99,
-    image: "/images/products/grill-mix.jpg",
+    image: "/images/products/chicken-wings.jpg",
     weight: "Approx. 800g",
     badge: "PROMO",
     rating: 4.9,
