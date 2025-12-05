@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ShoppingCart, Search, User, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Logo from "./Logo";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,16 +38,14 @@ export default function Header() {
           isScrolled ? "text-gray-900" : "text-gray-700"
         }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 ${
-              isScrolled ? "bg-primary shadow-lg" : "bg-primary"
-            }`}>
-              <span className="text-white font-bold text-xl">B</span>
-            </div>
-            <span className={`text-xl font-bold transition-colors duration-500 ${
-              isScrolled ? "text-gray-900" : "text-primary-dark"
-            }`}>BioChicken</span>
-          </Link>
+          <Logo
+            size="md"
+            showText={true}
+            containerClassName={`${isScrolled ? "text-gray-900" : "text-primary-dark"}`}
+            className={`transition-all duration-500 ${
+              isScrolled ? "bg-primary shadow-lg hover:shadow-xl hover:scale-110" : "bg-primary hover:shadow-lg hover:scale-105"
+            }`}
+          />
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex items-center space-x-8">

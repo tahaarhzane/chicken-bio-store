@@ -7,6 +7,7 @@ import {
   Phone,
   Mail
 } from "lucide-react";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -15,12 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo et description */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">B</span>
-              </div>
-              <span className="text-xl font-bold">BioChicken</span>
-            </div>
+            <Logo size="md" className="bg-white hover:bg-green-50" />
             <p className="text-green-100">
               Votre spécialiste du poulet bio de qualité supérieure, élevé dans le respect de l'environnement et du bien-être animal.
             </p>
