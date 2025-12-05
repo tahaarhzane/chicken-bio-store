@@ -29,13 +29,13 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-700 ${
         isScrolled
-          ? "bg-white/[0.08] backdrop-blur-3xl shadow-xl border-b border-white/[0.15]"
+          ? "bg-white/[0.12] backdrop-blur-2xl shadow-2xl border-b border-white/[0.2]"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className={`flex items-center justify-between h-16 transition-colors duration-500 ${
-          isScrolled ? "text-gray-900" : "text-gray-700"
+      <div className="container mx-auto px-8">
+        <div className={`flex items-center justify-between h-20 transition-all duration-500 ${
+          isScrolled ? "text-gray-900" : "text-white"
         }`}>
           {/* Logo */}
           <Logo
@@ -48,35 +48,35 @@ export default function Header() {
           />
 
           {/* Navigation Desktop */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-16">
             <Link
               href="/"
-              className={`font-medium transition-colors duration-300 ${
-                isScrolled ? "text-gray-900 hover:text-primary" : "text-gray-700 hover:text-primary"
+              className={`font-semibold text-lg transition-colors duration-300 ${
+                isScrolled ? "text-gray-900 hover:text-primary" : "text-white/90 hover:text-white"
               }`}
             >
               Accueil
             </Link>
             <Link
               href="/boutique"
-              className={`font-medium transition-colors duration-300 ${
-                isScrolled ? "text-gray-900 hover:text-primary" : "text-gray-700 hover:text-primary"
+              className={`font-semibold text-lg transition-colors duration-300 ${
+                isScrolled ? "text-gray-900 hover:text-primary" : "text-white/90 hover:text-white"
               }`}
             >
               Boutique
             </Link>
             <Link
               href="/a-propos"
-              className={`font-medium transition-colors duration-300 ${
-                isScrolled ? "text-gray-900 hover:text-primary" : "text-gray-700 hover:text-primary"
+              className={`font-semibold text-lg transition-colors duration-300 ${
+                isScrolled ? "text-gray-900 hover:text-primary" : "text-white/90 hover:text-white"
               }`}
             >
               À propos
             </Link>
             <Link
               href="/contact"
-              className={`font-medium transition-colors duration-300 ${
-                isScrolled ? "text-gray-900 hover:text-primary" : "text-gray-700 hover:text-primary"
+              className={`font-semibold text-lg transition-colors duration-300 ${
+                isScrolled ? "text-gray-900 hover:text-primary" : "text-white/90 hover:text-white"
               }`}
             >
               Contact
@@ -84,28 +84,28 @@ export default function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center space-x-4">
-            <button className={`p-2 rounded-full transition-all duration-400 ${
+          <div className="flex items-center space-x-6">
+            <button className={`p-3 rounded-full transition-all duration-400 ${
               isScrolled
-                ? "hover:bg-white/20 text-gray-900"
-                : "hover:bg-primary-light text-gray-700"
+                ? "hover:bg-white/20 text-gray-900 bg-white/10"
+                : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
             }`}>
-              <Search className="w-5 h-5" />
+              <Search className="w-6 h-6" />
             </button>
-            <button className={`p-2 rounded-full transition-all duration-400 ${
+            <button className={`p-3 rounded-full transition-all duration-400 ${
               isScrolled
-                ? "hover:bg-white/20 text-gray-900"
-                : "hover:bg-primary-light text-gray-700"
+                ? "hover:bg-white/20 text-gray-900 bg-white/10"
+                : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
             }`}>
-              <User className="w-5 h-5" />
+              <User className="w-6 h-6" />
             </button>
-            <button className={`p-2 rounded-full transition-all duration-400 relative ${
+            <button className={`p-3 rounded-full transition-all duration-400 relative ${
               isScrolled
-                ? "hover:bg-white/20 text-gray-900"
-                : "hover:bg-primary-light text-gray-700"
+                ? "hover:bg-white/20 text-gray-900 bg-white/10"
+                : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
             }`}>
-              <ShoppingCart className="w-5 h-5" />
-              <span className={`absolute top-0 right-0 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center transition-all duration-300 ${
+              <ShoppingCart className="w-6 h-6" />
+              <span className={`absolute top-0 right-0 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center transition-all duration-300 ${
                 isScrolled ? "bg-primary shadow-md" : "bg-primary"
               }`}>
                 0
@@ -114,10 +114,10 @@ export default function Header() {
 
             {/* Menu Mobile */}
             <button
-              className={`md:hidden p-2 rounded-full transition-all duration-400 ${
+              className={`md:hidden p-3 rounded-full transition-all duration-400 ${
                 isScrolled
-                  ? "hover:bg-white/20 text-gray-900"
-                  : "hover:bg-primary-light text-gray-700"
+                  ? "hover:bg-white/20 text-gray-900 bg-white/10"
+                  : "hover:bg-white/20 text-white bg-white/10 backdrop-blur-sm"
               }`}
               onClick={toggleMenu}
             >
