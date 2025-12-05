@@ -11,6 +11,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BioChicken - Poulet Bio de Qualité",
   description: "Découvrez notre sélection de poulet bio, élevé dans le respect de l'environnement et du bien-être animal. Livraison rapide à Paris et en Île-de-France.",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' }
+    ],
+    apple: [
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({

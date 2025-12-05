@@ -1,0 +1,25 @@
+{
+  "name": "BioChicken - Poulet Bio de Qualité",
+  "short_name": "BioChicken",
+  "description": "Découvrez notre sélection de poulet bio, élevé dans le respect de l'environnement et du bien-être animal.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#10B981",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "fr",
+  "direction": "ltr",
+  "categories": ["food", "shopping", "health"]
+}

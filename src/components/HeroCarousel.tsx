@@ -9,21 +9,21 @@ const slides = [
     title: "Poulet Bio Premium",
     subtitle: "Élevé en plein air",
     description: "Découvrez notre poulet biologique, élevé dans le respect de la nature et du bien-être animal",
-    image: "/images/hero-chicken-1.jpg"
+    image: "/images/hero-chicken-2.jpg"
   },
   {
     id: 2,
     title: "Découpe Artisanale",
     subtitle: "Qualité Bouchère",
     description: "Morceaux sélectionnés avec soin, préparés par nos artisans bouchers",
-    image: "/images/hero-chicken-2.jpg"
+    image: "/images/hero-chicken-3.jpg"
   },
   {
     id: 3,
     title: "Cuisine Bio",
     subtitle: "Saveurs Authentiques",
     description: "Des recettes traditionnelles qui subliment la qualité exceptionnelle de nos produits",
-    image: "/images/hero-chicken-3.jpg"
+    image: "/images/hero-chicken-1.jpg"
   }
 ];
 
